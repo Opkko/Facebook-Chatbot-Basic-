@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+
+    <category><pattern>WHAT IS YOUR NAME</pattern><template>My name is <bot name='Opkko'/>.</template></category>
+    <category><pattern>HELLO</pattern><template>Yo</template></category>
+    <category><pattern>MY NAME IS <set name='clientName'>*</set></pattern><template>Hey <get name='clientName'/>!</template></category>
+    <category><pattern>MY NAME IS <set name='clientName'>*</set></pattern><template><get name='clientName'/> <random><li>Hey</li><li>Hi</li><li>Hello</li></random> !</template></category>
+    <category><pattern>WHAT IS MY NAME</pattern><template>Your name is <get name='clientName'/></template></category>
+    <category><pattern>WHO ARE YOU</pattern><template><srai>WHAT IS YOUR NAME</srai></template></category>
+    <category><pattern>GIVE ME A LETTER</pattern><template><random><li>A</li><li>B</li><li>C</li></random></template></category>
+    <category><pattern>HOW ARE YOU FEELING TODAY</pattern><template><condition name='state' value='happy'>I am happy!</condition><condition name='state' value='sad'>I am sad! </condition></template></category>
+    <category><pattern>TELL ME ABOUT YOUR FEELINGS</pattern><template><condition><li name='state' value='happy'>I am happy!</li><li name='state' value='sad'>I am sad!</li><li>I kinda feel nothing <srai>WHAT IS YOUR NAME</srai></li></condition></template></category>
+    <category><pattern>WHAT IS YOUR FEELING TODAY</pattern><template><condition name='state'><li value='happy'>Feeling happy! </li><li value='sad'>Feeling sad today </li><li>I don't feel anything </li></condition></template></category>
+    <category><pattern>EXPLAIN *</pattern><template>Sorry, I do not have a clue</template></category>
+    <category><pattern>I AM *</pattern><template>Text before random<random><li><think><set name='clientAge'><star/></set></think></li><li><think><set name='clientAge'>22</set></think></li></random> Text after random</template></category>
+
+    <category><pattern>*</pattern><template>let me get back to you shortly :).</template></category>
+
+</aiml>
